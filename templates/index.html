@@ -6,64 +6,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heard</title>
     <link rel="stylesheet" href="/static/style.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="/">heard ✊</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">heard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <h1 id="title">Your Thoughts Matter: Be #Heard</h1>
-
     <!-- I think we only need login form because the employees will already be registered and assigned their own username and password -->
-    <div class="main">
-        <!-- <form action="#" id="login-form" class="account-form hidden" method="post">
-            <h4>Login</h4>
-            <div class="login-input">
-                <label for="login-username">username</label>
-                <input id="login-username" autocomplete="current-username">
+    <!-- We might not even need a sign in at all! We could save some time and spin it as completely anonymous!-->
+
+    <section style="background-color: #eee;">
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-6">
+                    <div class="card" id="chat2">
+                        <div class="card-header d-flex justify-content-between align-items-center p-3">
+                            <h5 class="mb-0">Chat</h5>
+                            <button type="button" class="btn btn-primary btn-sm" data-mdb-ripple-color="dark">whats
+                                going on?</button>
+                        </div>
+                        <div class="card-body" data-mdb-perfect-scrollbar="true"
+                            style="position: relative; height: 400px">
+
+                            <div class="d-flex flex-row justify-content-start mb-4">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                    alt="avatar 1" style="width: 45px; height: 100%;">
+                                <div>
+                                    <p class="small p-2 ms-3 mb-1 rounded-3" style="background-color: #f5f6f7;">
+                                        Sorry I don't
+                                        have. i
+                                        changed my phone.</p>
+                                    <p class="small ms-3 mb-3 rounded-3 text-muted">00:13</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row justify-content-end">
+                                <div>
+                                    <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">Okay then see you
+                                        on sunday!!
+                                    </p>
+                                </div>
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                                    alt="avatar 1" style="width: 45px; height: 100%;">
+                            </div>
+
+                        </div>
+                        <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                alt="avatar 3" style="width: 40px; height: 100%;">
+                            <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1"
+                                placeholder="Type message">
+                            <a id="send" class="ms-3" href=""><i class="fas fa-paper-plane"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="login-input">
-                <label for="login-password">password</label>
-                <input id="login-password" type="password" autocomplete="current-password">
+        </div>
+    </section>
+
+    <footer class="text-center text-lg-start bg-light text-muted">
+
+        <section class="d-flex justify-content-between p-4 border-bottom">
+            <div class="align-items-end">
+                <!-- Left content goes here -->
             </div>
-            <button type="submit">login</button>
-            <hr>
-        </form> -->
+            <div class="ms-auto">
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </section>
 
-        <!-- CHAT CONTAINER -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
 
-        <h2>Chat Messages</h2>
+                        <h6 class="fw-bold mb-4">
+                            <i class="fa-solid fa-hand-fist mr-20"></i> heard
+                        </h6>
+                        <p>
+                            At heard we strive to empower employees with a safe space to express concerns and blockers.
+                        </p>
+                    </div>
 
-        <div class="container">
-            <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;">
-            <p>Hello. How are you today?</p>
-            <span class="time-right">11:00</span>
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Documentation</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> San Francisco, CA</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            info@heard.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <p><b>heard</b></p>
         </div>
+    </footer>
 
-        <!-- <div class="container darker">
-            <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right" style="width:100%;">
-            <p>Hey! I'm fine. Thanks for asking!</p>
-            <span class="time-left">11:01</span>
-        </div>
 
-        <div class="container">
-            <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;">
-            <p>Sweet! So, what do you wanna do today?</p>
-            <span class="time-right">11:02</span>
-        </div>
+    <script src="/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-        <div class="container darker">
-            <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right" style="width:100%;">
-            <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-            <span class="time-left">11:05</span>
-        </div> -->
-        <script src="/js/app.js"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.js"
-            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    </div>
 </body>
 
 </html>
