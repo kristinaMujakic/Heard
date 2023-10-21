@@ -1,49 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heard</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet" />
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">heard</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">heard</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- I think we only need login form because the employees will already be registered and assigned their own username and password -->
-    <!-- We might not even need a sign in at all! We could save some time and spin it as completely anonymous!-->
+<!-- I think we only need login form because the employees will already be registered and assigned their own username and password -->
+<!-- We might not even need a sign in at all! We could save some time and spin it as completely anonymous!-->
 
-    <section style="background-color: #eee;">
-        <div class="container py-5">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-6">
-                    <div class="card" id="chat2">
-                        <div class="card-header d-flex justify-content-between align-items-center p-3">
-                            <h5 class="mb-0">Chat</h5>
-                            <button type="button" class="btn btn-primary btn-sm" data-mdb-ripple-color="dark">whats
-                                going on?</button>
-                        </div>
-                        <div id="chatBox" class="card-body">
+<section style="background-color: #eee;">
+    <div class="container py-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-6">
+                <div class="card" id="chat2">
+                    <div class="card-header d-flex justify-content-between align-items-center p-3">
+                        <h5 class="mb-0">Chat</h5>
 
-                            <!-- <div class="d-flex flex-row justify-content-start mb-4">
+                        <!-- Not quite sure where to place this button and if you like the idea of showing previous blockers and solutions -->
+                        <p class="btn btn-sm"><a href="/data">Previous blockers</a></p>
+
+                        <!-- Could this button be for the managment department to see what's going on and what all the submission blockers are?-->
+                        <button type="button" class="btn btn-primary btn-sm" data-mdb-ripple-color="dark">whats
+                            going on?</button>
+                    </div>
+                    <div id="chatBox" class="card-body">
+
+                        <!-- <div class="d-flex flex-row justify-content-start mb-4">
                                 <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
                                     alt="avatar 1" style="width: 45px; height: 100%;">
                                 <div>
@@ -64,90 +55,76 @@
                                     alt="avatar 1" style="width: 45px; height: 100%;">
                             </div> -->
 
-                        </div>
-                        <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3">
-                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
-                                alt="avatar 3" style="width: 40px; height: 100%;">
-                            <input type="text" class="form-control form-control-lg" id="userInput"
-                                placeholder="Type message">
-                            <a id="send" class="ms-3"><i class="fas fa-paper-plane"></i></a>
-                        </div>
                     </div>
+                    <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                            alt="avatar 3" style="width: 40px; height: 100%;">
+                        <input type="text" class="form-control form-control-lg" id="userInput"
+                            placeholder="Type message">
+                        <a id="send" class="ms-3"><i class="fas fa-paper-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center text-lg-start bg-light text-muted">
+
+    <section class="d-flex justify-content-between p-4 border-bottom">
+        <div class="align-items-end">
+            <!-- Left content goes here -->
+        </div>
+        <div class="ms-auto">
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+
+                    <h6 class="fw-bold mb-4">
+                        <i class="fa-solid fa-hand-fist mr-20"></i> heard
+                    </h6>
+                    <p>
+                        At heard we strive to empower employees with a safe space to express concerns and blockers.
+                    </p>
+                </div>
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Useful links
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Documentation</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Help</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i> San Francisco, CA</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        info@heard.com
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="text-center text-lg-start bg-light text-muted">
-
-        <section class="d-flex justify-content-between p-4 border-bottom">
-            <div class="align-items-end">
-                <!-- Left content goes here -->
-            </div>
-            <div class="ms-auto">
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-        </section>
-
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-
-                        <h6 class="fw-bold mb-4">
-                            <i class="fa-solid fa-hand-fist mr-20"></i> heard
-                        </h6>
-                        <p>
-                            At heard we strive to empower employees with a safe space to express concerns and blockers.
-                        </p>
-                    </div>
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-reset">Documentation</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Help</a>
-                        </p>
-                    </div>
-
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                        <p><i class="fas fa-home me-3"></i> San Francisco, CA</p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            info@heard.com
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2023 Copyright:
-            <p><b>heard</b></p>
-        </div>
-    </footer>
-
-
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="/static/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-</body>
-
-</html>
+    {% endblock %}
