@@ -1,5 +1,7 @@
 from flask import Flask, redirect, render_template, jsonify, request
 from models import db, Submission
+from mock_data import mock_employees, mock_submissions
+
 import os
 import openai
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -43,9 +45,20 @@ def send_submission():
         messages=messages
     )
     print(completion.choices[0].message)
+    print(user_submission)
 
     response = {
-        "message": completion.choices[0].message  # Convert the message to a JSON object
+        # Convert the message to a JSON object
+        "message": completion.choices[0].message
     }
-    
+
     return jsonify(response)  # Return the response as JSON
+
+
+# Route to render mock employee results
+
+@app.route("/data", methods=['GET'])
+def show_data():
+    """Display the mock employee and submission data."""
+
+    return render_template("data.html", employees=mock_employees, submissions=mock_submissions)
