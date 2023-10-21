@@ -35,3 +35,8 @@
     border-color: transparent;
     box-shadow: inset 0px 0px 0px 1px transparent;
 }
+
+#chatBox {
+    height: 400px; /* Set a fixed maximum height for the chat box */
+    overflow-y: auto; /* Enable vertical scroll when content exceeds the maximum height */
+}

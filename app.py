@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template
+from flask import Flask, redirect, render_template, jsonify, request
 from models import db, Submission
 import os
 import openai
@@ -27,15 +27,25 @@ def show_index():
 ##############################################################################
 # OpenAI routes
 
-@app.route("/send")
+@app.route("/send", methods=['POST'])
 def send_submission():
     """Send initial submission to OpenAI"""
 
+    user_submission = request.json.get('user_submission', '')
+
+    messages = [
+        {"role": "system", "content": "You are a chat bot listening to an employee's concern about a blocker at work. Respond with thank you if the user has provided enough information, like the team they are on. Or respond with a question to gather a better understanding of what is blocking them."},
+        {"role": "user", "content": user_submission}
+    ]
+
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
-        messages=[
-            {"role": "system", "content": "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair."},
-            {"role": "user", "content": "Compose a poem that explains the concept of recursion in programming."}
-        ]
+        messages=messages
     )
     print(completion.choices[0].message)
+
+    response = {
+        "message": completion.choices[0].message  # Convert the message to a JSON object
+    }
+    
+    return jsonify(response)  # Return the response as JSON
