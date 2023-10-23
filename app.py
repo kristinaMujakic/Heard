@@ -18,6 +18,10 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
+with open("prompt.txt", "r") as file:
+    prompt_text = file.read()
+
+conversation = [{"role": "system", "content": prompt_text}]
 
 @app.route("/")
 def show_index():
@@ -33,24 +37,19 @@ def show_index():
 def send_submission():
     """Send initial submission to OpenAI"""
 
-    user_submission = request.json.get('user_submission', '')
+    user_submission = {"role": "user", "content": request.json.get('user_submission', '')}
 
-    messages = [
-        {"role": "system", "content": "You are a chat bot listening to an employee's concern about a blocker at work. Respond with thank you if the user has provided enough information, like the team they are on. Or respond with a question to gather a better understanding of what is blocking them."},
-        {"role": "user", "content": user_submission}
-    ]
+    conversation.append(user_submission)
 
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
-        messages=messages
+        messages=conversation
     )
-    print(completion.choices[0].message)
-    print(user_submission)
 
-    response = {
-        # Convert the message to a JSON object
-        "message": completion.choices[0].message
-    }
+    conversation.append({"role": "system", "content": completion.choices[0].message.content})
+    print(conversation)
+
+    response = { "message": completion.choices[0].message }
 
     return jsonify(response)  # Return the response as JSON
 

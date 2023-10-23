@@ -1,5 +1,4 @@
 .navbar {
-    background-color: #FDFD96;
     color: black;
     padding: 15px;
     position: fixed;
@@ -37,6 +36,30 @@
 }
 
 #chatBox {
-    height: 400px; /* Set a fixed maximum height for the chat box */
-    overflow-y: auto; /* Enable vertical scroll when content exceeds the maximum height */
+    height: 550px;
+    overflow-y: auto; 
+}
+
+.icon {
+    border: 1px solid black !important;
+    margin-left: 10px;
+}
+
+.icon img {
+    width: 20px;
+    height: 20px;
+}
+
+#heard_icon {
+    width: 30px; 
+    height: auto;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+#sendFormBtn {
+    width: 5px;
+    display: flex;
+    justify-content: center;
 }
