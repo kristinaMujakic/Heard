@@ -1,6 +1,0 @@
-__pycache__/
-.vscode
-api_key.txt
-venv/
-.env
-.gitignore
