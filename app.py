@@ -27,7 +27,7 @@ conversation = [{"role": "system", "content": prompt_text}]
 def show_index():
     """Homepage"""
 
-    return render_template("index.html")
+    return render_template("submit.html")
 
 
 ##############################################################################

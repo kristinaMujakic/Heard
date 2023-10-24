@@ -10,7 +10,7 @@ body {
 }
 
 .navbar {
-    color: black;
+    color:#ffe494 !important;
     padding: 15px;
     position: fixed;
     top: 0;
