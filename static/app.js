@@ -1,13 +1,17 @@
-$(document).ready(function() {
+$(document).ready(function () {
+
+    //selectors
     const $userInput = $('#userInput');
     const $sendForm = $("#send");
     const $chatBox = $('#chatBox');
+    const $sendFormBtn = $('#sendFormBtn');
+
 
     function sendSubmission(e) {
         const userMessage = $userInput.val().trim();
         const chatMessageHTML = `
             <div class="d-flex flex-row justify-content-start mb-4 mt-4">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp" alt="avatar" style="width: 45px; height: 100%;">
+                <img src="/static/avatar.png" alt="avatar" style="width: 40px; height: 100%;">
                 <div>
                     <p class="small p-2 ms-3 mb-1 rounded-3" style="background-color: #f5f6f7;">
                         ${userMessage}
@@ -16,30 +20,36 @@ $(document).ready(function() {
             </div>
         `;
         $chatBox.append(chatMessageHTML);
+
         $userInput.val('');
+        $sendFormBtn.hide();
+        $('#loadingIcon').show();
+
         return userMessage;
     }
 
     async function getResponse(userMessage) {
         const response = await axios.post(
-            "/send", { "user_submission" : userMessage });
+            "/send", { "user_submission": userMessage });
         const chatMessageHTML = `
-            <div class="d-flex flex-row justify-content-end">
+            <div class="d-flex flex-row justify-content-end mr-0">
                 <div>
                     <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
                         ${response.data.message.content}
                     </p>
                 </div>
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
-                    alt="avatar 1" style="width: 45px; height: 100%;">
+                <img src="/static/bot_avatar.png"
+                    alt="avatar 1" class="ml-0" style="width: 40px; height: 100%;">
             </div>
         `;
         $chatBox.append(chatMessageHTML);
-        console.log(response);
+
+        $('#loadingIcon').hide();
+        $sendFormBtn.show();
     }
 
 
-    $sendForm.on('submit', function(e) {
+    $sendForm.on('submit', function (e) {
         e.preventDefault();
         const userMessage = sendSubmission();
         getResponse(userMessage);

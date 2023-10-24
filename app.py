@@ -30,6 +30,8 @@ def show_index():
     return render_template("submit.html")
 
 
+
+
 ##############################################################################
 # OpenAI routes
 
@@ -51,9 +53,12 @@ def send_submission():
 
     response = { "message": completion.choices[0].message }
 
-    return jsonify(response)  # Return the response as JSON
+    return jsonify(response) 
 
 
+
+
+##############################################################################
 # Route to render mock employee results
 
 @app.route("/data", methods=['GET'])

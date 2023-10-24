@@ -1,3 +1,5 @@
+/*////////////////////////////////////////////////////////////////////////////////*/
+/* Styles for repeated elements */
 body {
     display: flex;
     flex-direction: column;
@@ -38,6 +40,20 @@ body {
     color: black;
 }
 
+#heard_icon {
+    width: 30px; 
+    height: auto;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////////*/
+/* Chat box styles */
 #chat2 .form-control {
     border-color: transparent;
 }
@@ -60,14 +76,6 @@ body {
 .icon img {
     width: 20px;
     height: 20px;
-}
-
-#heard_icon {
-    width: 30px; 
-    height: auto;
-    border: 1px solid black;
-    padding: 3px;
-    border-radius: 5px;
 }
 
 #sendFormBtn {
