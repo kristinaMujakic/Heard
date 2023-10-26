@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ team_blockers["name"] }}</h2>
+<p>{{ team_blockers["summarized_blockers"] }}</p>
+
+<ul>
+    {% for team_submission in team_submissions %}
+    <li>{{ team_submission["message"] }}</li>
+    {% endfor %}
+</ul>
+</body>
+{% endblock %}
