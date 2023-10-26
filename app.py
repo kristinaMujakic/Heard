@@ -1,6 +1,6 @@
 from flask import Flask, redirect, render_template, jsonify, request
-from models import db, Submission
-from mock_data import mock_employees, mock_submissions
+from models import db
+from data import teams
 
 import os
 import openai
@@ -23,13 +23,12 @@ with open("prompt.txt", "r") as file:
 
 conversation = [{"role": "system", "content": prompt_text}]
 
+
 @app.route("/")
 def show_index():
     """Homepage"""
 
     return render_template("submit.html")
-
-
 
 
 ##############################################################################
@@ -39,7 +38,8 @@ def show_index():
 def send_submission():
     """Send initial submission to OpenAI"""
 
-    user_submission = {"role": "user", "content": request.json.get('user_submission', '')}
+    user_submission = {"role": "user",
+                       "content": request.json.get('user_submission', '')}
 
     conversation.append(user_submission)
 
@@ -48,21 +48,31 @@ def send_submission():
         messages=conversation
     )
 
-    conversation.append({"role": "system", "content": completion.choices[0].message.content})
+    conversation.append(
+        {"role": "system", "content": completion.choices[0].message.content})
     print(conversation)
 
-    response = { "message": completion.choices[0].message }
+    response = {"message": completion.choices[0].message}
 
-    return jsonify(response) 
-
-
+    return jsonify(response)
 
 
 ##############################################################################
-# Route to render mock employee results
+# Route to render teams with summarized blockers
+@app.route("/teams", methods=['GET'])
+def show_teams():
+    return render_template("teams.html", teams=teams)
 
-@app.route("/data", methods=['GET'])
-def show_data():
-    """Display the mock employee and submission data."""
+# Route to display specific blockers for a team
 
-    return render_template("data.html", employees=mock_employees, submissions=mock_submissions)
+
+@app.route("/teams/<int:team_id>", methods=['GET'])
+def show_team_blockers(team_id):
+    # Filter blockers for the selected team
+    selected_team = next(
+        (team for team in teams if team["id"] == team_id), None)
+    if selected_team:
+        team_blockers = selected_team.get("summarized_blockers", "")
+        team_submissions = selected_team["submissions"]
+        return render_template("team_blockers.html", team_blockers=team_blockers, team_submissions=team_submissions)
+    return "Team not found"
