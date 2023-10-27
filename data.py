@@ -92,31 +92,30 @@ team_delta_submissions = [
     }
 ]
 
-
 # Team data with summarized blockers
 teams = [
     {
         "id": 1,
         "name": "Team Alpha",
-        "summarized_blockers": "Faces communication challenges affecting their collaborative efforts. Employees report that without designated time to meet, they don't have context of when their managers may be busy or available for inquiries. This leads to them feeling like they are bothering their managers and not being sure when a good time is. They also mention that they might miss out on communication from teams working on adjacent projects, causing them to feel siloed and uncertain about where their work fits into the larger picture at the company.",
+        "summarized_blockers": "Struggles with project prioritization, leading to delays in task completion and difficulties in meeting deadlines. This lack of clarity causes frustration and hampers overall productivity.",
         "submissions": team_alpha_submissions
     },
     {
         "id": 2,
         "name": "Team Bravo",
-        "summarized_blockers": "Encounters communication issues that impact their work. They express concerns about not having designated time to meet, making it challenging to understand when their managers are available. This can lead to employees feeling like they are bothering their managers and not being sure when it's a good time. Additionally, they mention that they might miss out on communication from teams working on adjacent projects, causing them to feel isolated and unsure about their work's place within the larger company context.",
+        "summarized_blockers": "Faces resource allocation problems, resulting in overworked team members and burnout. The lack of balanced workloads and support impacts employee morale and well-being.",
         "submissions": team_bravo_submissions
     },
     {
         "id": 3,
         "name": "Team Charlie",
-        "summarized_blockers": "Deals with communication challenges that hinder their work. They report that without designated time to meet, employees lack context about their managers' availability, making them unsure about when it's appropriate to inquire. This can lead to employees feeling like they are bothering their managers. They also express concerns about potentially missing communication from teams working on adjacent projects, leading to a sense of isolation and uncertainty about their work's alignment with the larger company goals.",
+        "summarized_blockers": "Deals with process inefficiencies that hinder workflow. The absence of streamlined procedures leads to wasted time and frustration, impacting the team's overall efficiency and motivation.",
         "submissions": team_charlie_submissions
     },
     {
         "id": 4,
         "name": "Team Delta",
-        "summarized_blockers": "Experiences communication obstacles that hinder their collaborative efforts. Team members mention that they lack designated meeting times, leading to uncertainty about when their managers are available. This sometimes makes them hesitant to seek assistance from their managers. They are also concerned about missing out on communication from adjacent project teams, resulting in a sense of isolation and uncertainty about their roles in the company.",
+        "summarized_blockers": "Encounters alignment issues with company goals and strategies. Team members lack clarity on the company's overarching direction, causing uncertainty and affecting their motivation and sense of purpose.",
         "submissions": team_delta_submissions
     }
 ]
