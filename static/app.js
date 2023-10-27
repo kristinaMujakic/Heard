@@ -54,4 +54,16 @@ $(document).ready(function () {
         const userMessage = sendSubmission();
         getResponse(userMessage);
     });
+
+    // Like functionality
+    $('.like-button').click(function () {
+        const submissionId = $(this).data('id');
+        const likesCountElement = $('#likes-count-' + submissionId);
+        let likes = parseInt(likesCountElement.text());
+
+        //Simulate liking
+        likes += 1;
+
+        likesCountElement.text(likes + ' Likes');
+    });
 });
