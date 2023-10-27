@@ -12,7 +12,7 @@ body {
 }
 
 .navbar {
-    color:#ffe494 !important;
+    color: #ffe494 !important;
     padding: 15px;
     position: fixed;
     top: 0;
@@ -41,7 +41,7 @@ body {
 }
 
 #heard_icon {
-    width: 30px; 
+    width: 30px;
     height: auto;
     border: 1px solid black;
     padding: 3px;
@@ -65,7 +65,7 @@ body {
 
 #chatBox {
     height: 550px;
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 .icon {
@@ -82,4 +82,8 @@ body {
     width: 5px;
     display: flex;
     justify-content: center;
+}
+
+.teams {
+    margin: 15px;
 }
