@@ -33,7 +33,19 @@ Three core functionalities: Chatbot, Teams, and Team Blockers.
    - Selecting a specific team grants access to a route where users can view and interact with a list of blockers, with options for liking and viewing the number of previous likes.
 
 ## Installation
+1. Clone the repository to your local machine:
 
+    ```shell
+    git clone https://github.com/yourusername/heard.git
+    ```
+2. Create a virtual environment to manage your project's dependencies and install the required dependencies:
+    ```shell
+    pip install -r requirements.txt
+    ```
+3. Start the Flask application:
+    ```shell
+    flask run
+    ```
 
 
 ## Usage
@@ -45,7 +57,7 @@ Three core functionalities: Chatbot, Teams, and Team Blockers.
 - Explore the Teams route to facilitate effective team collaboration, addressing summarized blockers in a snap.
 
 3. **Team Blockers - Resolving Blockers:**
-- Click on a specific team to access the Teams_Blockers route, interact with individual blockers by liking them, and see the number of previous likes for each blocker.
+- Click on a specific team to access the Team Blockers route, interact with individual blockers by liking them, and see the number of previous likes for each blocker.
 
 ## Feedback and Contribution
 
