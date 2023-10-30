@@ -20,6 +20,26 @@ team_alpha_submissions = [
     {
         "id": 5,
         "message": "Improved feedback from my manager would help me grow in my role."
+    },
+    {
+        "id": 21,
+        "message": "I have difficulty accessing important files and documents."
+    },
+    {
+        "id": 22,
+        "message": "I need better software tools for project management."
+    },
+    {
+        "id": 23,
+        "message": "Our team's goals and objectives are unclear, affecting our performance."
+    },
+    {
+        "id": 24,
+        "message": "I face issues with project prioritization and resource allocation."
+    },
+    {
+        "id": 29,
+        "message": "I need more opportunities for skill development and training."
     }
 ]
 
@@ -43,6 +63,26 @@ team_bravo_submissions = [
     {
         "id": 10,
         "message": "Improved feedback from my manager would help me grow in my role."
+    },
+    {
+        "id": 23,
+        "message": "We lack a clear delegation of tasks and responsibilities."
+    },
+    {
+        "id": 24,
+        "message": "I require more training on using collaboration tools effectively."
+    },
+    {
+        "id": 29,
+        "message": "We need a better system for tracking project progress."
+    },
+    {
+        "id": 30,
+        "message": "Our team struggles with decision-making processes."
+    },
+    {
+        "id": 31,
+        "message": "Our team faces issues with task prioritization."
     }
 ]
 
@@ -66,6 +106,26 @@ team_charlie_submissions = [
     {
         "id": 15,
         "message": "I'd appreciate more training opportunities to enhance my skills and contribute effectively to the team."
+    },
+    {
+        "id": 25,
+        "message": "We have too many unnecessary meetings that consume our time."
+    },
+    {
+        "id": 26,
+        "message": "I need better access to project-related information."
+    },
+    {
+        "id": 32,
+        "message": "We face challenges with team collaboration and information sharing."
+    },
+    {
+        "id": 33,
+        "message": "Our team needs better project management tools."
+    },
+    {
+        "id": 34,
+        "message": "I need assistance with work prioritization."
     }
 ]
 
@@ -89,6 +149,26 @@ team_delta_submissions = [
     {
         "id": 20,
         "message": "Our team needs a more organized task management system to keep everyone on the same page and meet deadlines consistently."
+    },
+    {
+        "id": 27,
+        "message": "I feel disconnected from the team's decision-making process."
+    },
+    {
+        "id": 28,
+        "message": "I miss in-person team bonding activities and events."
+    },
+    {
+        "id": 35,
+        "message": "Our team needs better communication tools for remote work."
+    },
+    {
+        "id": 36,
+        "message": "I require more clarity on my role's contribution to the company's goals."
+    },
+    {
+        "id": 37,
+        "message": "I struggle with time management and task prioritization."
     }
 ]
 
@@ -120,7 +200,6 @@ teams = [
     }
 ]
 
-
 # Communication tools data
 communication_tools = ["Regular check-in meetings (daily, weekly)", "Work chat (Slack)",
                        "Email", "Microsoft Teams", "Task forces", "Group presentations to leadership"]
@@ -136,7 +215,6 @@ possible_solutions = [
     "Action plan with a time frame",
     "An indicator of the level of urgency to prioritize",
     "Asynchronous feedback",
-
 ]
 
 # Additional comments data
