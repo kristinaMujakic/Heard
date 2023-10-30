@@ -65,5 +65,15 @@ $(document).ready(function () {
         likes += 1;
 
         likesCountElement.text(likes + ' Likes');
+
     });
+
+    // Generate and set random likes for each submission
+    $('.likes-count').each(function () {
+        const likesCountElement = $(this);
+        const randomLikes = Math.floor(Math.random() * 30);
+        likesCountElement.text(randomLikes + ' Likes');
+    });
+
+
 });
