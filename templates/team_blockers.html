@@ -5,28 +5,28 @@
 <div class="container-sm">
     <div class="card mb-3" style="margin-top: 15px">
         <div class="row g-0">
-            <div class="col-md-4">
-                <img src="https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    class="img-fluid rounded-start" alt="Post it papers" style="width: 100%; height: 100%" />
-            </div>
+            <div class="col-md-12 align-items-center justify-content-center d-flex" style="background-color:#FFF8E1">
 
-            <div class="col-md-8" style="background-color:#FFF8E1">
-
-                <ul class="">
+                <ul class="" id="blockers">
                     {% for team_submission in team_submissions %}
-                    <li class="d-flex justify-content-between">
-                        <span>{{ team_submission["message"] }}</span>
-                        <span>
-                            <span class="likes-count " id="likes-count-{{ team_submission.id }}">0 Likes</span>
-                            <button class="btn btn-link like-button " data-id="{{ team_submission.id }}">
-                                <img width="25" height="25" src="../static/like_icon.svg">
-                            </button>
-                        </span>
+                    <li>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ team_submission["message"] }}</h5>
+                                <button type="button" class="btn btn-primary commentBtn">Comment</button>
+                                <span class="likes-count " id="likes-count-{{ team_submission.id }}">0 Likes</span>
+                                <button class="btn btn-link like-button " data-id="{{ team_submission.id }}">
+                                    <img width="25" height="25" src="../static/like_icon.svg">
+                                </button>
+                            </div>
+                        </div>
                     </li>
                     {% endfor %}
+                    <button type="button" class="btn btn-secondary commentBtn">Load More</button>
                 </ul>
 
             </div>
         </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}

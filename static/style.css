@@ -87,3 +87,19 @@ body {
 .teams {
     margin: 15px;
 }
+
+
+#blockers li {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#blockers {
+    list-style: none;
+    margin-top: 30px;
+    width: 90%;
+}
+
+.commentBtn {
+    margin-right: 10px;
+}
