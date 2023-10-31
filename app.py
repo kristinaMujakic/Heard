@@ -58,21 +58,26 @@ def send_submission():
 
 
 ##############################################################################
-# Route to render teams with summarized blockers
+# Route to render teams
+
 @app.route("/teams", methods=['GET'])
 def show_teams():
+    """Render teams with summarized blockers"""
+
     return render_template("teams.html", teams=teams)
 
+
 # Route to display specific blockers for a team
-
-
 @app.route("/teams/<int:team_id>", methods=['GET'])
 def show_team_blockers(team_id):
-    # Filter blockers for the selected team
+    """Filter blockers for the selected team"""
+
     selected_team = next(
         (team for team in teams if team["id"] == team_id), None)
+
     if selected_team:
         team_blockers = selected_team.get("summarized_blockers", "")
         team_submissions = selected_team["submissions"]
         return render_template("team_blockers.html", team_blockers=team_blockers, team_submissions=team_submissions)
+
     return "Team not found"
