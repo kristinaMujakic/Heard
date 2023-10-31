@@ -80,27 +80,3 @@ teams = [
         "submissions": team_delta_submissions
     }
 ]
-
-# Communication tools data
-communication_tools = ["Regular check-in meetings (daily, weekly)", "Work chat (Slack)",
-                       "Email", "Microsoft Teams", "Task forces", "Group presentations to leadership"]
-
-# Possible solutions/features data
-possible_solutions = [
-    "Use of reminders",
-    "Notifications via email and/or team chat (e.g., Slack)",
-    "Screenshotting the issue",
-    "Ability to validate issues (voting)",
-    "Ability to share solutions (comments)",
-    "Creating a task force",
-    "Action plan with a time frame",
-    "An indicator of the level of urgency to prioritize",
-    "Asynchronous feedback",
-]
-
-# Additional comments data
-additional_comments = [
-    "IDEA: Software like ChatGPT for internal work documents, procedures, protocols, inquiries, 'how-to's' to speed up the process of searching for work-related information buried in different files/folders/intranet pages.",
-    "Both users mentioned social disconnect as a major challenge in remote work, difficulty building rapport with new employees, missing micro-interactions as most communication is strictly business. Virtual happy hours aren't successful due to different time zones.",
-    "Biggest strategy is to get people to write stuff down and use asynchronous communication instead of meetings. Eventually, you get into a cycle where most of your work is async, and you have better control of your time.",
-]
