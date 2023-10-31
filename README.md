@@ -2,6 +2,8 @@
 
 Welcome to Heard! Heard is the product we've developed during a recent hackathon. It's an innovative web application designed to streamline workflow and enhance team collaboration in the modern workplace. This README provides an overview of our MVP product, its features, and how you can get started using it.
 
+-LIVE DEMO-
+
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
@@ -33,6 +35,7 @@ Three core functionalities: Chatbot, Teams, and Team Blockers.
    - Selecting a specific team grants access to a route where users can view and interact with a list of blockers, with options for liking and viewing the number of previous likes.
 
 ## Installation
+
 1. Clone the repository to your local machine:
 
     ```shell
@@ -73,7 +76,9 @@ We welcome your feedback and contributions to make Heard even better. Please fol
 
 Your contributions are highly valued, and we appreciate your help in making Heard a more powerful tool.
 
+## Contributors
 
+This project was created by @brendenGit, @emilyhuangux and @kristinaMujakic. The project was coded with paired programming, so contributions were equal across all aspects of the app.
 
 If you have any questions or require further assistance, don't hesitate to contact us. Enjoy using Heard and make your workflow more efficient!
 
