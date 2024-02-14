@@ -78,7 +78,8 @@ Your contributions are highly valued, and we appreciate your help in making Hear
 
 ## Contributors
 
-This project was created by @brendenGit, @emilyhuangux and @kristinaMujakic. The project was coded with paired programming, so contributions were equal across all aspects of the app.
+This project was created by @brendenGit, @emilyhuangux and @kristinaMujakic. 
+The project was coded through collaborative group programming, ensuring equal contributions from all team members across all aspects of the app.
 
 If you have any questions or require further assistance, don't hesitate to contact us. Enjoy using Heard and make your workflow more efficient!
 
